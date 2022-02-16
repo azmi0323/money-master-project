@@ -27,10 +27,12 @@
     <main>
         <section class="mx-5">
             <div class="row row-cols-1 row-cols-md-2 g-4">
+                <!-- left side image  -->
                 <div class="col">
                     <div class="card">
                         <img src="img/bgImg.png" class="card-img-top" alt="">
                     </div>
+                    <!-- right side inputs  -->
                 </div>
                 <div class="col text-center">
                     <div class="card p-4">
@@ -40,39 +42,37 @@
                             </div>
                             <div class="row row-cols-2">
                                 <h5 class=" my-3">Income :</h5>
-                                <input class=" my-2" type="number">
+                                <input id="income-input" class=" my-2" type="number">
                             </div>
                             <div>
                                 <h4 class="text-center card-title m-2"> Expences</h4>
                             </div>
                             <div class="row row-cols-2">
                                 <h5 class="my-3">Food :</h5>
-                                <input class=" my-2" type="number">
+                                <input required id="food-input" class=" my-2" type="number">
                             </div>
                             <div class="row row-cols-2">
                                 <h5 class=" my-3">Rent :</h5>
-                                <input class=" my-2" type="number">
+                                <input id="rent-input" class=" my-2" type="number">
                             </div>
                             <div class="row row-cols-2">
                                 <h5 class=" my-3">Clothes :</h5>
-                                <input class=" my-2" type="number">
+                                <input id="clothes-input" class=" my-2" type="number">
                             </div>
                             <div>
-                                <h4 class="text-center m-3 fs-3"><button type="button" class="btn bg-info text-white">Calculate</button></h4>
+                            <button type="button" id="calculate-btn" class="btn px-4 my-3 bg-info text-white">Calculate</button>
                             </div>
-                            <div class="row row-cols-2">
-                                <h5 class=" my-3">Total Expences : </h5>
-                                <h5 class="text-center my-3">5000</h5>
+                            <div class="">
+                                <h5 class=" my-3">Total Expences : <span id="total-expences">5000</span> </h5>
                             </div>
-                            <div class="row row-cols-2">
-                                <h5 class="my-3">Balance : </h5>
-                                <h5 class="text-center my-3">5000</h5>
+                            <div class="">
+                                <h5 class=" my-3">Balance : <span id="balance-info">5000</span> </h5>
                             </div>
                             <div class="row row-cols-4">
                                 <h5 class=" my-3">Save :</h5>
-                                <input class=" my-2" type="number">
+                                <input id="save-info" class=" my-2" type="number">
                                 <h5 class="text-center my-3">%</h5>
-                                <button type="button" class="btn bg-info text-white my-2 ">save</button>
+                                <button type="button" id="save-btn" class="btn bg-info text-white my-2 ">Save</button>
                             </div>
                             <div class="">
                                 <h5 class=" my-3">Saving Ammount : <span>5000</span> </h5>
