@@ -4,6 +4,7 @@
 .rightsidebg{
     background-color: rgba(209, 206, 206, 0.295);
 }
+/* first modal style  */
 .firstModal{
     display: none;
     position: fixed;
@@ -14,6 +15,7 @@
     background-color: rgba(231, 142, 142, 0.247);
     text-transform: capitalize;
 }
+/* common modal style  */
 .firstModal .secondModal{
     border-radius: 10px;
     position: fixed;
@@ -21,7 +23,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
+/* responsive  */
 @media (max-width:500px) {
     .headText{
        font-size: 25px; 
