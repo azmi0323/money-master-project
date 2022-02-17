@@ -2,7 +2,9 @@
     color: rgb(26, 216, 241);
     font-size: 50px;
 }
-
+.rightsidebg{
+    background-color: rgba(209, 206, 206, 0.295);
+}
 .firstModal{
     display: none;
     position: fixed;

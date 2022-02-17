@@ -1,16 +1,18 @@
+// get Element by id function
 function callWithId(idname) {
     return document.getElementById(idname)
 }
-
+// errorHandeling function 
 function errorText(text){
     callWithId('modal-text').innerText = text
         callWithId('first-modal').style.display = 'block';
 }
-
+// global variable 
 let balances = 0;
 let incomeInput = 0;
+
+// get calculate button 
 callWithId('calculate-btn').addEventListener('click', function () {
-    // get calculate button 
      incomeInput = parseInt(callWithId('income-input').value);
     const foodInput = parseInt(callWithId('food-input').value);
     const rentInput = parseInt(callWithId('rent-input').value);
@@ -18,18 +20,19 @@ callWithId('calculate-btn').addEventListener('click', function () {
     const totalExpences = callWithId('total-expences');
     const balanceInfo = callWithId('balance-info');
 
+    // final calculation calculate button 
+    const allExpence = foodInput + rentInput + clothesInput;
+    totalExpences.innerText = allExpence;
+    balances = incomeInput - allExpence
+    balanceInfo.innerText = balances;
+
+    // error handeling calculate button 
     if (incomeInput < 0 || foodInput < 0 || rentInput < 0 || clothesInput < 0) {
         errorText("Please Enter Positive Numbers")
     }
     else if (isNaN(incomeInput) == true || isNaN(foodInput) == true || isNaN(rentInput) == true || isNaN(clothesInput) == true) {
         errorText("Plese Fillup with all valid number")
     }
-
-    const allExpence = foodInput + rentInput + clothesInput;
-    totalExpences.innerText = allExpence;
-    balances = incomeInput - allExpence
-    balanceInfo.innerText = balances;
-
 })
 
 // savings calculation 
@@ -37,8 +40,11 @@ callWithId('save-btn').addEventListener('click', function () {
     const saveInfo = parseInt(callWithId('save-info').value);
     const savingAmmount = callWithId('saving-ammount');
     const remainBalance = callWithId('remain-balance');
+
+    // final calculation of save 
     let totalSavings = (incomeInput * saveInfo) / 100;
     
+    // error Handeling save button 
     if(saveInfo<0 || isNaN(saveInfo)){
         errorText( "Please Enter Positive Savings or valid number")
     }else if(balances<totalSavings){

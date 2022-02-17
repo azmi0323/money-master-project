@@ -1,97 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Selary distribution</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selary distribution</title>
+        <!-- css link -->
+        <link rel="stylesheet" href="style.css" />
 
-    <!-- css link -->
-    <link rel="stylesheet" href="style.css">
+        <!-- bootstarp css link  -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    </head>
 
-    <!-- bootstarp css link  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <body>
+        <!-- Header part  -->
+        <header>
+            <h1 class="text-center fw-bold m-5 headText">Salery <span class="">Distribution... </span></h1>
+        </header>
 
-
-</head>
-
-<body>
-    <!-- Header part  -->
-    <header>
-        <h1 class="text-center fw-bold m-5 headText">Salery <span class="">Distribution... </span> </h1>
-    </header>
-
-    <!-- Main part  -->
-    <main>
-        <section class="mx-5">
-            <div class="row row-cols-1 row-cols-md-2 align-items-stretch g-4">
-                <!-- left side image  -->
-                <div class="col col-lg-7 col col-md-12">
-                        <img src="img/bgImg.png" class=" img-fluid h-100 w-100" alt="">
-                    <!-- right side inputs  -->
-                </div>
-                <div class="col col-lg-5 col col-md-12 text-center">
-                    <div class="card p-0 p-lg-4">
-                        <div class="card-body">
-                            <div>
-                                <h4 class="text-center card-title m-2"> Income</h4>
-                            </div>
-                            <div class="row row-cols-2">
-                                <h5 class=" my-3">Income :</h5>
-                                <input id="income-input" class=" my-2" type="number" placeholder="Your Total Income">
-                            </div>
-                            <div>
-                                <h4 class="text-center card-title m-2"> Expences</h4>
-                            </div>
-                            <div class="row row-cols-2">
-                                <h5 class="my-3">Food :</h5>
-                                <input required id="food-input" placeholder="Total Food Cost" class=" my-2" type="number">
-                            </div>
-                            <div class="row row-cols-2">
-                                <h5 class=" my-3">Rent :</h5>
-                                <input id="rent-input" class=" my-2" type="number" placeholder="Total Rent Cost">
-                            </div>
-                            <div class="row row-cols-2">
-                                <h5 class=" my-3">Clothes :</h5>
-                                <input id="clothes-input" class=" my-2" type="number" placeholder="Total Clothes Cost">
-                            </div>
-                            <div>
-                            <button type="button" id="calculate-btn" class="btn px-4 my-3 bg-info text-white">Calculate</button>
-                            </div>
-                            <div class="">
-                                <h5 class=" my-3">Total Expences : $<span id="total-expences">0</span> </h5>
-                            </div>
-                            <div class="">
-                                <h5 class=" my-3">Balance : $<span id="balance-info">0</span> </h5>
-                            </div>
-                            <div class="d-flex w-100 flex-wrap align-items-center justify-content-center">
-                                <h5 class=" my-3">Save :</h5>
-                                <input id="save-info" class=" my-2" type="number" placeholder="Save Money">
-                                <h5 class="text-center my-3 mx-md-2 mx-1">%</h5>
-                                <button type="button" id="save-btn" class="btn bg-info text-white my-2 ">Save</button>
-                            </div>
-                            <div class="">
-                                <h5 class=" my-3">Saving Ammount : $<span id="saving-ammount">0</span> </h5>
-                            </div>
-                            <div class="">
-                                <h5 class=" my-3">Remain Balance : $<span id="remain-balance">0</span> </h5>
-                                
+        <!-- Main part  -->
+        <main>
+            <section class="mx-5">
+                <div class="row row-cols-1 row-cols-md-2 align-items-stretch g-4">
+                    <!-- left side image  -->
+                    <div class="col col-lg-7 col col-md-12">
+                        <img src="img/bgImg.png" class="img-fluid h-100 w-100" alt="" />
+                        <!-- right side inputs  -->
+                    </div>
+                    <div class="rightsidebg col col-lg-5 col col-md-12 text-center">
+                        <div class="card p-0 p-lg-4">
+                            <div class="card-body rightsidebg">
+                                <div>
+                                    <h2 class="text-center card-title m-2 fs-1">Income</h2>
+                                </div>
+                                <div class="row row-cols-2">
+                                    <h5 class="my-3">Income :</h5>
+                                    <input id="income-input" class="bg-light my-2" type="number" placeholder="Your Total Income" />
+                                </div>
+                                <div>
+                                    <h2 class="text-center card-title m-2 fs-1">Expences</h2>
+                                </div>
+                                <div class="row row-cols-2">
+                                    <h5 class="my-3">Food :</h5>
+                                    <input required id="food-input" placeholder="Total Food Cost" class="bg-light my-2" type="number" />
+                                </div>
+                                <div class="row row-cols-2">
+                                    <h5 class="my-3">Rent :</h5>
+                                    <input id="rent-input" class="bg-light my-2" type="number" placeholder="Total Rent Cost" />
+                                </div>
+                                <div class="row row-cols-2">
+                                    <h5 class="my-3">Clothes :</h5>
+                                    <input id="clothes-input" class="bg-light my-2" type="number" placeholder="Total Clothes Cost" />
+                                </div>
+                                <div>
+                                    <button type="button" id="calculate-btn" class="btn px-4 my-3 bg-info text-white fs-4">Calculate</button>
+                                </div>
+                                <div class="">
+                                    <h2 class="my-3">Total Expences : $<span id="total-expences">0</span></h2>
+                                </div>
+                                <div class="">
+                                    <h2 class="my-3">Balance : $<span id="balance-info">0</span></h2>
+                                </div>
+                                <div class="d-flex w-100 flex-wrap align-items-center justify-content-center">
+                                    <h5 class="my-3">Save :</h5>
+                                    <input id="save-info" class="bg-light my-2 p-2 mx-2" type="number" placeholder="Save Money" />
+                                    <h5 class="text-center my-3 mx-md-2 mx-1">%</h5>
+                                    <button type="button" id="save-btn" class="btn bg-info text-white fs-4 my-2">Save</button>
+                                </div>
+                                <div class="">
+                                    <h5 class="my-3 fs-3">Saving Ammount : $<span id="saving-ammount">0</span></h5>
+                                </div>
+                                <div class="">
+                                    <h5 class="my-3 fs-3">Remain Balance : $<span id="remain-balance">0</span></h5>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </section>
+            <div class="firstModal" id="first-modal">
+                <div class="secondModal p-5 bg-danger" id="second-modal">
+                    <h3 class="text-white" id="modal-text">hello world</h3>
+                </div>
             </div>
-        </section>
-        <div class="firstModal" id="first-modal">
-            <div class="secondModal p-5 bg-danger" id="second-modal">
-                <h3 class="text-white" id="modal-text">hello world</h3>
-            </div>
-        </div>
-    </main>
-    <script src="app.js"></script>
-
-</body>
-
+        </main>
+        <script src="app.js"></script>
+    </body>
 </html>
