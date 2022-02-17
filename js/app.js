@@ -20,19 +20,23 @@ callWithId('calculate-btn').addEventListener('click', function () {
     const totalExpences = callWithId('total-expences');
     const balanceInfo = callWithId('balance-info');
 
-    // final calculation calculate button 
     const allExpence = foodInput + rentInput + clothesInput;
-    totalExpences.innerText = allExpence;
-    balances = incomeInput - allExpence
-    balanceInfo.innerText = balances;
-
     // error handeling calculate button 
     if (incomeInput < 0 || foodInput < 0 || rentInput < 0 || clothesInput < 0) {
         errorText("Please Enter Positive Numbers")
     }
     else if (isNaN(incomeInput) == true || isNaN(foodInput) == true || isNaN(rentInput) == true || isNaN(clothesInput) == true) {
         errorText("Plese Fillup with all valid number")
+    }else if(incomeInput < allExpence){
+        errorText("Your Expence is higher then your income")
+    }else{
+        // final calculation calculate button 
+    totalExpences.innerText = allExpence;
+    balances = incomeInput - allExpence
+    balanceInfo.innerText = balances;
     }
+    
+
 })
 
 // savings calculation 
@@ -53,6 +57,8 @@ callWithId('save-btn').addEventListener('click', function () {
         savingAmmount.innerText = totalSavings
         remainBalance.innerText = balances - totalSavings
     }
+
+    
 })
 //close first modal
 callWithId('first-modal').addEventListener('click', function () {
