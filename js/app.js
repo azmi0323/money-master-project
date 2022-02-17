@@ -3,9 +3,9 @@ function callWithId(idname) {
     return document.getElementById(idname)
 }
 // errorHandeling function 
-function errorText(text){
+function errorText(text) {
     callWithId('modal-text').innerText = text
-        callWithId('first-modal').style.display = 'block';
+    callWithId('first-modal').style.display = 'block';
 }
 // global variable 
 let balances = 0;
@@ -13,7 +13,7 @@ let incomeInput = 0;
 
 // get calculate button 
 callWithId('calculate-btn').addEventListener('click', function () {
-     incomeInput = parseInt(callWithId('income-input').value);
+    incomeInput = parseInt(callWithId('income-input').value);
     const foodInput = parseInt(callWithId('food-input').value);
     const rentInput = parseInt(callWithId('rent-input').value);
     const clothesInput = parseInt(callWithId('clothes-input').value);
@@ -43,13 +43,13 @@ callWithId('save-btn').addEventListener('click', function () {
 
     // final calculation of save 
     let totalSavings = (incomeInput * saveInfo) / 100;
-    
+
     // error Handeling save button 
-    if(saveInfo<0 || isNaN(saveInfo)){
-        errorText( "Please Enter Positive Savings or valid number")
-    }else if(balances<totalSavings){
-        errorText( "you have not enough money to save")
-    }else{
+    if (saveInfo < 0 || isNaN(saveInfo)) {
+        errorText("Please Enter Positive Savings or valid number")
+    } else if (balances < totalSavings) {
+        errorText("you have not enough money to save")
+    } else {
         savingAmmount.innerText = totalSavings
         remainBalance.innerText = balances - totalSavings
     }
